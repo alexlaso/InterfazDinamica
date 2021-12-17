@@ -7,10 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundImage;
-import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 import javafx.util.Duration;
 
 import java.net.URL;
@@ -42,13 +39,11 @@ public class HelloController implements Initializable {
     // elementos de la vista
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        desplegable.setTranslateX(-desplegable.getWidth());
+        desplegable.setTranslateX(-52);
         isDesplegado=false;
     }
 
-
-    @FXML
-    protected void desplegarMenu(){
+    private void despliegue(){
         animacion=new TranslateTransition(Duration.millis(300),desplegable);
         animacionbtn= new TranslateTransition(Duration.millis(300),btnMenu);
 
@@ -65,17 +60,32 @@ public class HelloController implements Initializable {
             animacionbtn.setFromX(desplegable.getWidth());
             animacionbtn.setToX(0);
             isDesplegado=false;
-
         }
         animacion.play();
         animacionbtn.play();
     }
 
     @FXML
+    protected void desplegarMenu(){
+       despliegue();
+    }
+
+    @FXML
     protected void vista1(){
-      //  fondo.setBackground(new BackgroundImage(new Image("perros.jpeg")));
+        fondo.setBackground(new Background(
+                new BackgroundImage(
+                        new Image("perros.jpg", fondo.getWidth(), fondo.getHeight(), false, true),
+                        BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER,
+                        BackgroundSize.DEFAULT)));
+        despliegue();
     }
 
     @FXML
     protected void vista2(){
+        fondo.setBackground(new Background(
+                new BackgroundImage(
+                        new Image("samurai.jpg", fondo.getWidth(), fondo.getHeight(), false, true),
+                        BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER,
+                        BackgroundSize.DEFAULT)));
+        despliegue();
 }}
