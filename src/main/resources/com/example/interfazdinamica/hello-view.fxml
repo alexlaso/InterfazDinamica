@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
@@ -7,10 +8,19 @@
    <children>
       <VBox fx:id="desplegable" maxHeight="-Infinity" maxWidth="-Infinity" StackPane.alignment="TOP_LEFT">
          <children>
-            <Button fx:id="btnVista1" mnemonicParsing="false" onAction="#vista1" text="Vista 1" />
-            <Button fx:id="btnVista2" mnemonicParsing="false" onAction="#vista2" text="Vista 2" />
+            <Button fx:id="btnVista1" mnemonicParsing="false" onAction="#vista1" text="Vista 1">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="btnVista2" mnemonicParsing="false" onAction="#vista2" text="Vista 2">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
          </children>
       </VBox>
-      <Button fx:id="btnMenu" mnemonicParsing="false" onAction="#desplegarMenu" text="Menú" StackPane.alignment="TOP_LEFT" />
+      <Button fx:id="btnMenu" mnemonicParsing="false" onAction="#desplegarMenu" text="Menú" StackPane.alignment="TOP_LEFT">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
    </children>
 </StackPane>
