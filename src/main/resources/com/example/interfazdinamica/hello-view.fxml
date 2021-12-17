@@ -3,14 +3,14 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<StackPane fx:id="fondo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.interfazdinamica.HelloController">
+<StackPane fx:id="fondo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.interfazdinamica.HelloController">
    <children>
-      <VBox fx:id="desplegable" prefHeight="200.0" prefWidth="100.0">
+      <VBox fx:id="desplegable" maxHeight="-Infinity" maxWidth="-Infinity" StackPane.alignment="TOP_LEFT">
          <children>
-            <Button mnemonicParsing="false" text="Vista 1" />
-            <Button mnemonicParsing="false" text="Vista 2" />
+            <Button fx:id="btnVista1" mnemonicParsing="false" onAction="#vista1" text="Vista 1" />
+            <Button fx:id="btnVista2" mnemonicParsing="false" onAction="#vista2" text="Vista 2" />
          </children>
       </VBox>
-      <Button fx:id="btnMenu" mnemonicParsing="false" text="Menú" StackPane.alignment="TOP_LEFT" />
+      <Button fx:id="btnMenu" mnemonicParsing="false" onAction="#desplegarMenu" text="Menú" StackPane.alignment="TOP_LEFT" />
    </children>
 </StackPane>
